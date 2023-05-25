@@ -18,3 +18,4 @@ are working fine.
 * numpy			```pip install numpy```
 * pandas		```pip install pandas```
 
+## Output Screenshots
