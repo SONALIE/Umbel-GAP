@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAP</title>
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            height: 100vh;
+        }
+        .container_div{
+            
+            display: flex;
+            width: 100vw;
+            justify-content: space-around;
+        }
+        .logo_container{
+            padding: 5%;
+        }
+
+        *, *:before, *:after {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+          }
+          
+          body {
+            font-family: 'Nunito', sans-serif;
+            color: #384047;
+            overflow-x: hidden;
+            background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+            overflow-y: hidden;
+          }
+          
+          form {
+            max-width: 300px;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background: #f4f7f8;
+            border-radius: 8px;
+          }
+          
+          h1,.admission_chances {
+            margin: 0 0 30px 0;
+            text-align: center;
+          }
+          
+          input[type="text"],
+          input[type="password"],
+          input[type="date"],
+          input[type="datetime"],
+          input[type="email"],
+          input[type="number"],
+          input[type="search"],
+          input[type="tel"],
+          input[type="time"],
+          input[type="url"],
+          textarea,
+          select {
+            background: rgba(255,255,255,0.1);
+            border: none;
+            font-size: 16px;
+            height: auto;
+            margin: 0;
+            outline: 0;
+            padding: 15px;
+            width: 100%;
+            background-color: #e8eeef;
+            color: #8a97a0;
+            box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+            margin-bottom: 30px;
+          }
+          
+          input[type="radio"],
+          input[type="checkbox"] {
+            margin: 0 4px 8px 0;
+          }
+          
+          select {
+            padding: 6px;
+            height: 32px;
+            border-radius: 2px;
+          }
+          
+          button {
+            padding: 19px 39px 18px 39px;
+            color: #FFF;
+            background-color: #4bc970;
+            font-size: 18px;
+            text-align: center;
+            font-style: normal;
+            border-radius: 5px;
+            width: 100%;
+            border: 1px solid #3ac162;
+            border-width: 1px 1px 3px;
+            box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+            margin-bottom: 10px;
+          }
+          
+          fieldset {
+            margin-bottom: 30px;
+            border: none;
+          }
+          
+          legend {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+          }
+          
+          label {
+            display: block;
+            margin-bottom: 8px;
+          }
+          
+          label.light {
+            font-weight: 300;
+            display: inline;
+          }
+          
+          .number {
+            background-color: #5fcf80;
+            color: #fff;
+            height: 30px;
+            width: 30px;
+            display: inline-block;
+            font-size: 0.8em;
+            margin-right: 4px;
+            line-height: 30px;
+            text-align: center;
+            text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+            border-radius: 100%;
+          }
+          
+          @media screen and (min-width: 480px) {
+          
+            form {
+              max-width: 480px;
+            }
+          
+          }
+
+          .form_row{
+            width: 100%;
+            padding: 5%;
+            margin-left: 8%;
+          }
+          
+          form{
+            max-height: 600px;
+            overflow-y: auto;
+          }
+
+          a{
+            text-decoration: none;
+          }
+
+          .instructions_div{
+            margin-top: 15%;
+            padding: 5%;
+            color: #FFF;
+          }
+          .instructions_div ul{
+            padding: 4%;
+            padding-left: 8%;
+          }
+          .instructions_div ul li{
+            font-size: 20px;
+            }
+
+            .form_row_header{
+                position: fixed;
+                top: 0px;
+                padding: 10px;
+                right: 0px;
+            }
+            .form_div{
+                margin-top: 12px;
+            }
+
+            .logout_button{
+                background-color: red !important;
+                border: none;
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                width: 120px;
+            }
+            .form_row_header>p{
+                font-size: 24px;
+            }
+
+                #form_data::-webkit-scrollbar-track
+                {
+                    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+                    background-color: #F5F5F5;
+                }
+
+                #form_data::-webkit-scrollbar
+                {
+                    width: 10px;
+                    background-color: #F5F5F5;
+                }
+
+                #form_data::-webkit-scrollbar-thumb
+                {
+                    background-color: #393939;
+                    border: 2px solid #555555;
+                }
+
+                .logout_form{
+                  max-width: none !important;
+                  margin: 0px !important; 
+                  padding: 0px !important; 
+                  background: none !important; 
+                  border-radius: 0px !important;
+                }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="container_div">
+            <div class="logo_container">
+            <!-- <img src="logo.png" alt=""> -->
+            <!-- {{ url_for('static', filename='logo.png') }} -->
+            
+            <img src="../static/images/logo.png" alt="">
+
+            <div class="instructions_div">
+                <h1>Instructions for Input Features</h1>
+      <ul>
+			<li>GRE Score (out of 340)</li>
+			<li>TOEFL Score (out of 120)</li>
+			<li>University Rating (out of 5)</li>
+			<li>Statment of Purpose (SOP) (out of 5)</li>
+			<li>Letter of Recommendation (LOR) Strength (out of 5)</li>
+			<li>Undergraduate CGPA (out of 10)</li>
+			<li>Research Experience (Either 0 or 1)</li>
+	   
+	  </ul>
+            </div>
+            </div>
+            
+            <div class="row form_row">
+                <div class="form_row_header">
+                    <!-- <p>Hello Ayush  <button>Logout</button></p> -->
+                    <form method="GET" class="logout_form" action="{{ url_for('logout') }}">
+                      <p>Hello {{username}}  <input type="submit" class="logout_button" value="Logout"></p>
+                      
+                    </form>
+                </div>
+                <div class="col-md-12 form_div">
+                  <form action="{{url_for('predict')}}" method="post" id="form_data">
+                    {% if GRE_Score %}
+                    <h2 class="admission_chances"> {{prediction_text}}</h2>
+                   {% else %}
+                    <h1> Predict your university chances </h1>
+                    {% endif %}
+
+                    {% if GRE_Score %}
+                    <fieldset>
+                    
+                      <label for="GRE Score">GRE Score:</label>
+                      <input type="number" name="GRE Score"  value="{{GRE_Score}}"  required="required" min="0" max="340">
+
+                      <label for="TOEFL Score">TOEFL Score:</label>
+                      <input type="number" name="TOEFL Score" value="{{TOEFL_Score}}"  required="required" min="0" max="120">
+                        
+                      <label for="University Rating">University Rating:</label>
+                      <input type="number" name="University Rating" value="{{University_Rating}}"  required="required" step="0.1" min="1" max="5">
+
+                      <label for="SOP">SOP:</label>
+                      <input type="number" name="SOP" value="{{SOP}}" required="required" onkeypress="return check(event,value)"  min="1" max="5">
+                      
+                      <label for="LOR">LOR:</label>
+                      <input type="number" name="LOR" value="{{LOR}}"  required="required" onkeypress="return check(event,value)"  min="1" max="5">
+
+                      <label for="CGPA">CGPA:</label>
+                      <input type="number" name="CGPA" value="{{CGPA}}"  required="required" onkeypress="return check(event,value)" step="0.01" min="1" max="10">
+
+                      <label for="Research">Research:</label>
+                      <input type="number" name="Research" value="{{Research}}"  required="required" min="0" max="1">
+                    
+                    
+                     
+                      
+                    </fieldset>
+                    {% else %}
+                    <fieldset>
+                    
+                      <label for="GRE Score">GRE Score:</label>
+                      <input type="number" name="GRE Score"   required="required" min="0" max="340">
+
+                      <label for="TOEFL Score">TOEFL Score:</label>
+                      <input type="number" name="TOEFL Score"  required="required" min="0" max="120">
+                        
+                      <label for="University Rating">University Rating:</label>
+                      <input type="number" name="University Rating"  required="required" step="0.1" min="1" max="5">
+
+                      <label for="SOP">SOP:</label>
+                      <input type="number" name="SOP" required="required" onkeypress="return check(event,value)"  min="1" max="5">
+                      
+                      <label for="LOR">LOR:</label>
+                      <input type="number" name="LOR"  required="required" onkeypress="return check(event,value)"  min="1" max="5">
+
+                      <label for="CGPA">CGPA:</label>
+                      <input type="number" name="CGPA"  required="required" onkeypress="return check(event,value)" step="0.01" min="1" max="10">
+
+                      <label for="Research">Research:</label>
+                      <input type="number" name="Research"  required="required" min="0" max="1">
+                    
+                    
+                     
+                      
+                    </fieldset>
+                    {% endif %}
+
+                   
+
+                   <fieldset>
+                    <button type="submit">Submit</button>
+                   
+                </fieldset>
+                   </form>
+                    </div>
+                  </div>
+        </div>
+    </div>
+</body>
+</html>
