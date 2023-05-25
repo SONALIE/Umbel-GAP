@@ -18,4 +18,13 @@ are working fine.
 * numpy			```pip install numpy```
 * pandas		```pip install pandas```
 
-## Output Screenshots
+<details>
+<summary>View Code Output: </summary>
+<p>Login/Register Page:</p>
+<img src="./images/login.png"/>
+<img src="./images/register.png"/>
+<p>Home Page:</p>
+<img src="./images/home.png"/>
+<p>Prediction Page:</p>
+<img src="./images/predict.png"/>
+</details>
