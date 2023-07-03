@@ -20,8 +20,7 @@ are working fine.
 
 <details>
 <summary>View Code Output: </summary>
-<p>Login/Register Page:</p>
-<img src="./images/login.png"/>
+<p>Register Page:</p>
 <img src="./images/register.png"/>
 <p>Home Page:</p>
 <img src="./images/home.png"/>
